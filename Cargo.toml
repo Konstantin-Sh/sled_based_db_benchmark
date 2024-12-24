@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "test-storage-tree",
+    "vanilla-storage-tree",
+]
+resolver = "2"
