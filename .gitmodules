@@ -1,0 +1,3 @@
+[submodule "test-storage-tree"]
+	path = test-storage-tree
+	url = https://github.com/hicaru/test-storage-tree.git
