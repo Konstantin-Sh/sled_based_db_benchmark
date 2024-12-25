@@ -1,5 +1,6 @@
 [workspace]
 members = [
+    "storage-benchmarks",
     "test-storage-tree",
     "vanilla-storage-tree",
 ]

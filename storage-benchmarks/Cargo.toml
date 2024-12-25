@@ -1,0 +1,18 @@
+[package]
+name = "storage-benchmarks"
+version = "0.0.1"
+edition = "2021"
+
+[dependencies]
+concurrent_binary = { path = "../test-storage-tree" }
+vanilla_sled = { path = "../vanilla-storage-tree" }
+criterion = { version = "0.5", features = ["async_futures"] }
+tokio = { version = "1.0", features = ["full"] }
+blake3 = "1.0"
+rand = "0.8"
+tempfile = "3.2"
+futures = "0.3"
+
+[[bench]]
+name = "storage_benchmarks"
+harness = false
