@@ -5,3 +5,7 @@ members = [
     "vanilla-storage-tree",
 ]
 resolver = "2"
+
+# [workspace.dependencies]
+# tokio = { version = "1.42.0", features = ["full"] }
+
