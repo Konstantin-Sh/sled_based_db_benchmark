@@ -77,6 +77,7 @@ fn bench_create_db(c: &mut Criterion) {
 fn bench_add_node(c: &mut Criterion) {
     let mut group = c.benchmark_group("add_single_node");
 
+    group.measurement_time(Duration::from_secs(60));
     let data_size = 1024;
     let setup_nodes = 1000;
 
@@ -149,6 +150,7 @@ fn bench_add_node(c: &mut Criterion) {
 fn bench_get_node(c: &mut Criterion) {
     let mut group = c.benchmark_group("get_single_node");
 
+    group.measurement_time(Duration::from_secs(60));
     let data_size = 1024;
     let setup_nodes = 1000;
 
