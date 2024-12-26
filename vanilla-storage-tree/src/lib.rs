@@ -1,5 +1,4 @@
 use concurrent_binary::{Node, StorageError};
-use serde::{Deserialize, Serialize};
 use sled::Db;
 
 /// Type alias for Result with StorageError as error type
@@ -21,7 +20,7 @@ impl StorageManager {
     ///
     /// # Returns
     /// * `Result<Self>` - New StorageManager instance or error
-    pub fn new(db_path: &str, number_of_nodes: usize) -> Result<Self> {
+    pub fn new(db_path: &str, _number_of_nodes: usize) -> Result<Self> {
         let db = sled::open(db_path)?;
         // Allocate with extra capacity for potential new nodes
         Ok(Self { db })

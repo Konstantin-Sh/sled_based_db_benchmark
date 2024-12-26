@@ -1,6 +1,6 @@
 [package]
 name = "storage-benchmarks"
-version = "0.0.2"
+version = "0.0.3"
 edition = "2021"
 
 [dependencies]
@@ -12,6 +12,7 @@ blake3 = "1.0"
 rand = "0.8"
 tempfile = "3.2"
 futures = "0.3"
+async-trait = "0.1"
 
 [[bench]]
 name = "storage_benchmarks"
