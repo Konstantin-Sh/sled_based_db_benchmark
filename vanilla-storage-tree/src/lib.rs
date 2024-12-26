@@ -1,76 +1,9 @@
+use concurrent_binary::{Node, StorageError};
 use serde::{Deserialize, Serialize};
 use sled::Db;
-use std::error::Error;
-use std::fmt;
-
-/// Custom error type for storage operations
-#[derive(Debug)]
-pub enum StorageError {
-    /// Represents errors that occur when performing I/O operations
-    IoError(std::io::Error),
-    /// Represents errors from the underlying database operations
-    DbError(sled::Error),
-    /// Represents errors during serialization/deserialization of data
-    SerializationError(bincode::Error),
-    /// Represents errors when working with system time
-    SystemTimeError(std::time::SystemTimeError),
-}
-
-impl fmt::Display for StorageError {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        match self {
-            StorageError::IoError(e) => write!(f, "IO error: {}", e),
-            StorageError::DbError(e) => write!(f, "Database error: {}", e),
-            StorageError::SerializationError(e) => write!(f, "Serialization error: {}", e),
-            StorageError::SystemTimeError(e) => write!(f, "System time error: {}", e),
-        }
-    }
-}
-
-impl Error for StorageError {}
-
-// Implement From trait for automatic error conversion
-impl From<std::io::Error> for StorageError {
-    fn from(err: std::io::Error) -> Self {
-        StorageError::IoError(err)
-    }
-}
-
-impl From<sled::Error> for StorageError {
-    fn from(err: sled::Error) -> Self {
-        StorageError::DbError(err)
-    }
-}
-
-impl From<bincode::Error> for StorageError {
-    fn from(err: bincode::Error) -> Self {
-        StorageError::SerializationError(err)
-    }
-}
-
-impl From<std::time::SystemTimeError> for StorageError {
-    fn from(err: std::time::SystemTimeError) -> Self {
-        StorageError::SystemTimeError(err)
-    }
-}
 
 /// Type alias for Result with StorageError as error type
 type Result<T> = std::result::Result<T, StorageError>;
-
-/// Represents a node in the storage system that holds encrypted data
-/// Each node contains a hash for identification, optional encrypted data,
-/// timestamp for ordering, and size information
-#[derive(Debug, Serialize, Deserialize)]
-pub struct Node {
-    /// BLAKE3 hash used as a unique identifier
-    pub hash: [u8; 32],
-    /// Optional encrypted data (None in cache, Some in storage)
-    pub cipher_data: Option<Vec<u8>>,
-    /// Unix timestamp for node creation/modification
-    pub timestamp: u64,
-    /// Size of the encrypted data in bytes
-    pub size: usize,
-}
 
 /// Main storage manager that handles both persistent storage and in-memory cache
 pub struct StorageManager {

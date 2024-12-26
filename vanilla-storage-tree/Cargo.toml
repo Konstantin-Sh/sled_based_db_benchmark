@@ -1,6 +1,6 @@
 [package]
 name = "vanilla_sled"
-version = "0.0.1"
+version = "0.0.2"
 edition = "2021"
 
 [dependencies]
@@ -10,6 +10,7 @@ tokio = { version = "1.0", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
 bincode = "1.3"
 rand = "0.8"
+concurrent_binary = { path = "../test-storage-tree"}
 
 [dev-dependencies]
 tempfile = "3.2"
