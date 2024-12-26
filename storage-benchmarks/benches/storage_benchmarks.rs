@@ -224,5 +224,135 @@ fn bench_get_node(c: &mut Criterion) {
     group.finish();
 }
 
-criterion_group!(benches, bench_create_db, bench_add_node, bench_get_node);
+// Benchmark nonexistent node retrieval
+fn bench_get_nonexistent_node(c: &mut Criterion) {
+    let mut group = c.benchmark_group("get_nonexistent_node");
+
+    group.measurement_time(Duration::from_secs(60));
+    let data_size = 1024;
+    let setup_nodes = 1000;
+
+    // Generate a hash that definitely won't exist in the database
+    let nonexistent_data = generate_test_data(data_size);
+    let nonexistent_hash = blake3::hash(&nonexistent_data).into();
+
+    group.bench_function("cached_storage", |b| {
+        b.iter_batched(
+            || {
+                let temp_dir = tempdir().unwrap();
+                let db_path = temp_dir.path().join("bench_db");
+                let runtime = tokio::runtime::Runtime::new().unwrap();
+
+                // Setup database with known data
+                let storage = runtime.block_on(async {
+                    let storage =
+                        CachedStorage::new(db_path.to_str().unwrap(), setup_nodes).unwrap();
+
+                    // Populate with data that's different from our test hash
+                    for _ in 0..setup_nodes {
+                        let data = generate_test_data(data_size);
+                        let hash = blake3::hash(&data).into();
+                        storage.add_node(data, hash).await.unwrap();
+                    }
+                    storage
+                });
+
+                (temp_dir, storage, runtime)
+            },
+            |(temp_dir, storage, runtime)| {
+                runtime.block_on(async {
+                    // Try to retrieve the nonexistent node
+                    let result = storage.get_node(&nonexistent_hash).await.unwrap();
+                    assert!(result.is_none(), "Node should not exist");
+                });
+                (temp_dir, storage, runtime)
+            },
+            criterion::BatchSize::LargeInput,
+        )
+    });
+
+    group.bench_function("vanilla_storage", |b| {
+        b.iter_batched(
+            || {
+                let temp_dir = tempdir().unwrap();
+                let db_path = temp_dir.path().join("bench_db");
+                let runtime = tokio::runtime::Runtime::new().unwrap();
+
+                let storage = runtime.block_on(async {
+                    let storage =
+                        VanillaStorage::new(db_path.to_str().unwrap(), setup_nodes).unwrap();
+
+                    // Populate with data that's different from our test hash
+                    for _ in 0..setup_nodes {
+                        let data = generate_test_data(data_size);
+                        let hash = blake3::hash(&data).into();
+                        storage.add_node(data, hash).await.unwrap();
+                    }
+                    storage
+                });
+
+                (temp_dir, storage, runtime)
+            },
+            |(temp_dir, storage, runtime)| {
+                runtime.block_on(async {
+                    // Try to retrieve the nonexistent node
+                    let result = storage.get_node(&nonexistent_hash).await.unwrap();
+                    assert!(result.is_none(), "Node should not exist");
+                });
+                (temp_dir, storage, runtime)
+            },
+            criterion::BatchSize::LargeInput,
+        )
+    });
+
+    // Add additional benchmark for cached implementation with "warm" cache
+    group.bench_function("cached_storage_warm", |b| {
+        b.iter_batched(
+            || {
+                let temp_dir = tempdir().unwrap();
+                let db_path = temp_dir.path().join("bench_db");
+                let runtime = tokio::runtime::Runtime::new().unwrap();
+
+                let storage = runtime.block_on(async {
+                    let storage =
+                        CachedStorage::new(db_path.to_str().unwrap(), setup_nodes).unwrap();
+
+                    // Populate with data
+                    for _ in 0..setup_nodes {
+                        let data = generate_test_data(data_size);
+                        let hash = blake3::hash(&data).into();
+                        storage.add_node(data, hash).await.unwrap();
+                    }
+
+                    // Warm up the cache by doing some reads
+                    for _ in 0..10 {
+                        let _ = storage.get_node(&nonexistent_hash).await.unwrap();
+                    }
+
+                    storage
+                });
+
+                (temp_dir, storage, runtime)
+            },
+            |(temp_dir, storage, runtime)| {
+                runtime.block_on(async {
+                    let result = storage.get_node(&nonexistent_hash).await.unwrap();
+                    assert!(result.is_none(), "Node should not exist");
+                });
+                (temp_dir, storage, runtime)
+            },
+            criterion::BatchSize::LargeInput,
+        )
+    });
+
+    group.finish();
+}
+
+criterion_group!(
+    benches,
+    bench_create_db,
+    bench_add_node,
+    bench_get_node,
+    bench_get_nonexistent_node,
+);
 criterion_main!(benches);
