@@ -1,28 +1,27 @@
 use concurrent_binary::{Node, StorageError};
 use sled::Db;
 
-/// Type alias for Result with StorageError as error type
+/// Type alias for Result with `StorageError` as error type
 type Result<T> = std::result::Result<T, StorageError>;
 
-/// Main storage manager that handles both persistent storage and in-memory cache
+/// Main storage manager that handles persistent storage only
 pub struct StorageManager {
     /// Persistent storage using sled database
     pub db: Db,
 }
 
 impl StorageManager {
-    /// Creates a new StorageManager instance
+    /// Creates a new `StorageManager` instance
     ///
     /// # Arguments
     /// * `db_path` - Path to the sled database file
-    /// * `number_of_nodes` - Number of nodes for memory pre-allocation
-    ///                       Will allocate space for number_of_nodes + 1 to optimize insertions
+    /// * `_number_of_nodes` - (unused) Number of nodes for memory pre-allocation
+    ///                       Will allocate space for `number_of_nodes` + 1 to optimize insertions
     ///
     /// # Returns
-    /// * `Result<Self>` - New StorageManager instance or error
+    /// * `Result<Self>` - New `StorageManager` instance or error
     pub fn new(db_path: &str, _number_of_nodes: usize) -> Result<Self> {
         let db = sled::open(db_path)?;
-        // Allocate with extra capacity for potential new nodes
         Ok(Self { db })
     }
 
@@ -65,7 +64,7 @@ impl StorageManager {
         }
     }
 
-    /// Deletes a node from both storage and cache
+    /// Deletes a node from storage
     ///
     /// # Arguments
     /// * `hash` - BLAKE3 hash of the node to delete
@@ -73,7 +72,6 @@ impl StorageManager {
     /// # Returns
     /// * `Result<()>` - Success or error
     pub async fn delete_node(&self, hash: &[u8; 32]) -> Result<()> {
-        // Remove from database first
         self.db.remove(hash)?;
 
         Ok(())
