@@ -1,4 +1,3 @@
-// storage-benchmarks/benches/storage_benchmarks.rs
 use concurrent_binary::StorageManager as CachedStorage;
 use concurrent_binary::{Node, StorageError};
 use criterion::{criterion_group, criterion_main, BenchmarkId, Criterion};

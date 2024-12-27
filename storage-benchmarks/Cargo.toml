@@ -13,6 +13,8 @@ rand = "0.8"
 tempfile = "3.2"
 futures = "0.3"
 async-trait = "0.1"
+jemallocator = "0.5"
+jemalloc-ctl = "0.5"
 
 [[bench]]
 name = "storage_benchmarks"
