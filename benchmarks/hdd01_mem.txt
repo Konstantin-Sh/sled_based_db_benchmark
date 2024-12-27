@@ -1,0 +1,110 @@
+lscpu
+...
+Vendor ID:                GenuineIntel
+  Model name:             Intel(R) Core(TM) i3-6006U CPU @ 2.00GHz
+    CPU family:           6
+    Model:                78
+    Thread(s) per core:   2
+    Core(s) per socket:   2
+    Socket(s):            1
+    Stepping:             3
+    CPU(s) scaling MHz:   100%
+    CPU max MHz:          2000.0000
+    CPU min MHz:          400.0000
+    BogoMIPS:             3999.93
+...
+---
+vmstat -s
+     16242548 K total memory
+      2302968 K used memory
+      3376252 K active memory
+      4353976 K inactive memory
+      7789124 K free memory
+       321504 K buffer memory
+      6472212 K swap cache
+     33555452 K total swap
+         2864 K used swap
+     33552588 K free swap
+...
+---
+lspci | grep -i bridge
+00:00.0 Host bridge: Intel Corporation Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Host Bridge/DRAM Registers (rev 08)
+...
+---
+sudo hdparm -Tt /dev/sda
+
+/dev/sda:
+ Timing cached reads:   12198 MB in  1.98 seconds = 6159.32 MB/sec
+ Timing buffered disk reads: 392 MB in  3.01 seconds = 130.23 MB/sec
+---
+fio --name=hdd01 --ioengine=libaio --rw=readwrite --bs=4k --size=1G --numjobs=1 --time_based --runtime=30s --direct=1
+
+Run status group 0 (all jobs):
+   READ: bw=1625KiB/s (1664kB/s), 1625KiB/s-1625KiB/s (1664kB/s-1664kB/s), io=47.6MiB (49.9MB), run=30010-30010msec
+  WRITE: bw=1620KiB/s (1659kB/s), 1620KiB/s-1620KiB/s (1659kB/s-1659kB/s), io=47.5MiB (49.8MB), run=30010-30010msec
+---
+Run tests
+
+Measuring Vanilla Storage - add:
+Baseline memory usage: 22288352 bytes
+Final memory usage: 29218784 bytes
+Memory difference: 6930432 bytes
+
+Measuring Cached Storage - add:
+Baseline memory usage: 22295920 bytes
+Final memory usage: 29258672 bytes
+Memory difference: 6962752 bytes
+
+Measuring Vanilla Storage - delete:
+Baseline memory usage: 22224192 bytes
+Final memory usage: 29314032 bytes
+Memory difference: 7089840 bytes
+
+Measuring Cached Storage - delete:
+Baseline memory usage: 22830192 bytes
+Final memory usage: 29894480 bytes
+Memory difference: 7064288 bytes
+
+Run tests
+
+Measuring Vanilla Storage - add:
+Baseline memory usage: 22204128 bytes
+Final memory usage: 29134560 bytes
+Memory difference: 6930432 bytes
+
+Measuring Cached Storage - add:
+Baseline memory usage: 22211696 bytes
+Final memory usage: 29200048 bytes
+Memory difference: 6988352 bytes
+
+Measuring Vanilla Storage - delete:
+Baseline memory usage: 22139968 bytes
+Final memory usage: 29229808 bytes
+Memory difference: 7089840 bytes
+
+Measuring Cached Storage - delete:
+Baseline memory usage: 22774640 bytes
+Final memory usage: 29780560 bytes
+Memory difference: 7005920 bytes
+
+Run tests
+
+Measuring Vanilla Storage - add:
+Baseline memory usage: 22246272 bytes
+Final memory usage: 29219392 bytes
+Memory difference: 6973120 bytes
+
+Measuring Cached Storage - add:
+Baseline memory usage: 22254864 bytes
+Final memory usage: 29249616 bytes
+Memory difference: 6994752 bytes
+
+Measuring Vanilla Storage - delete:
+Baseline memory usage: 22183136 bytes
+Final memory usage: 29272976 bytes
+Memory difference: 7089840 bytes
+
+Measuring Cached Storage - delete:
+Baseline memory usage: 22817808 bytes
+Final memory usage: 29853424 bytes
+Memory difference: 7035616 bytes

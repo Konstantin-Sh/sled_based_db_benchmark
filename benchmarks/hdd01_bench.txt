@@ -1,0 +1,443 @@
+
+create_db_1000_nodes/cached_storage
+                        time:   [111.05 ms 130.18 ms 161.03 ms]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high severe
+create_db_1000_nodes/vanilla_storage
+                        time:   [110.63 ms 120.81 ms 128.42 ms]
+
+add_single_node/cached_storage
+                        time:   [33.539 µs 36.203 µs 39.284 µs]
+Found 4 outliers among 100 measurements (4.00%)
+  2 (2.00%) high mild
+  2 (2.00%) high severe
+add_single_node/vanilla_storage
+                        time:   [20.232 µs 22.241 µs 24.459 µs]
+Found 11 outliers among 100 measurements (11.00%)
+  8 (8.00%) high mild
+  3 (3.00%) high severe
+
+get_single_node/cached_storage
+                        time:   [18.915 µs 20.822 µs 22.932 µs]
+Found 10 outliers among 100 measurements (10.00%)
+  6 (6.00%) high mild
+  4 (4.00%) high severe
+get_single_node/vanilla_storage
+                        time:   [14.852 µs 17.173 µs 19.863 µs]
+Found 15 outliers among 100 measurements (15.00%)
+  7 (7.00%) high mild
+  8 (8.00%) high severe
+
+get_nonexistent_node/cached_storage
+                        time:   [16.547 µs 19.168 µs 22.335 µs]
+Found 8 outliers among 100 measurements (8.00%)
+  3 (3.00%) high mild
+  5 (5.00%) high severe
+get_nonexistent_node/vanilla_storage
+                        time:   [7.5649 µs 9.5900 µs 12.101 µs]
+Found 12 outliers among 100 measurements (12.00%)
+  9 (9.00%) high mild
+  3 (3.00%) high severe
+get_nonexistent_node/cached_storage_warm
+                        time:   [6.5106 µs 8.6685 µs 12.152 µs]
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+
+Cached Storage - Threads: 10, Avg latency: 53.276µs, Throughput: 18770.02 ops/sec
+Cached Storage - Threads: 10, Avg latency: 48.244µs, Throughput: 20727.56 ops/sec
+Cached Storage - Threads: 10, Avg latency: 50.165µs, Throughput: 19933.94 ops/sec
+Cached Storage - Threads: 10, Avg latency: 56.979µs, Throughput: 17550.08 ops/sec
+Cached Storage - Threads: 10, Avg latency: 58.787µs, Throughput: 17010.30 ops/sec
+Cached Storage - Threads: 10, Avg latency: 62.221µs, Throughput: 16071.55 ops/sec
+Cached Storage - Threads: 10, Avg latency: 67.488µs, Throughput: 14817.42 ops/sec
+Cached Storage - Threads: 10, Avg latency: 76.281µs, Throughput: 13109.31 ops/sec
+Cached Storage - Threads: 10, Avg latency: 86.245µs, Throughput: 11594.78 ops/sec
+Cached Storage - Threads: 10, Avg latency: 81.839µs, Throughput: 12219.11 ops/sec
+Cached Storage - Threads: 10, Avg latency: 83.972µs, Throughput: 11908.63 ops/sec
+Cached Storage - Threads: 10, Avg latency: 75.192µs, Throughput: 13299.20 ops/sec
+Cached Storage - Threads: 10, Avg latency: 89.245µs, Throughput: 11205.09 ops/sec
+Cached Storage - Threads: 10, Avg latency: 89.791µs, Throughput: 11136.96 ops/sec
+Cached Storage - Threads: 10, Avg latency: 85.882µs, Throughput: 11643.75 ops/sec
+Cached Storage - Threads: 10, Avg latency: 85.732µs, Throughput: 11664.12 ops/sec
+Cached Storage - Threads: 10, Avg latency: 94.375µs, Throughput: 10595.95 ops/sec
+Cached Storage - Threads: 10, Avg latency: 95.077µs, Throughput: 10517.75 ops/sec
+Cached Storage - Threads: 10, Avg latency: 91.088µs, Throughput: 10978.38 ops/sec
+Cached Storage - Threads: 10, Avg latency: 87.603µs, Throughput: 11415.13 ops/sec
+Cached Storage - Threads: 10, Avg latency: 88.281µs, Throughput: 11327.38 ops/sec
+Cached Storage - Threads: 10, Avg latency: 86.919µs, Throughput: 11504.94 ops/sec
+Cached Storage - Threads: 10, Avg latency: 81.197µs, Throughput: 12315.65 ops/sec
+Cached Storage - Threads: 10, Avg latency: 91.202µs, Throughput: 10964.57 ops/sec
+Cached Storage - Threads: 10, Avg latency: 84.584µs, Throughput: 11822.54 ops/sec
+Cached Storage - Threads: 10, Avg latency: 92.814µs, Throughput: 10774.18 ops/sec
+Cached Storage - Threads: 10, Avg latency: 92.554µs, Throughput: 10804.50 ops/sec
+Cached Storage - Threads: 10, Avg latency: 87.385µs, Throughput: 11443.59 ops/sec
+Cached Storage - Threads: 10, Avg latency: 77.434µs, Throughput: 12914.11 ops/sec
+Cached Storage - Threads: 10, Avg latency: 61.91µs, Throughput: 16152.46 ops/sec
+Cached Storage - Threads: 10, Avg latency: 84.91µs, Throughput: 11777.12 ops/sec
+Cached Storage - Threads: 10, Avg latency: 82.594µs, Throughput: 12107.36 ops/sec
+Cached Storage - Threads: 10, Avg latency: 83.741µs, Throughput: 11941.53 ops/sec
+Cached Storage - Threads: 10, Avg latency: 92.046µs, Throughput: 10864.05 ops/sec
+Cached Storage - Threads: 10, Avg latency: 83.825µs, Throughput: 11929.57 ops/sec
+Cached Storage - Threads: 10, Avg latency: 91.848µs, Throughput: 10887.48 ops/sec
+Cached Storage - Threads: 10, Avg latency: 89.637µs, Throughput: 11155.99 ops/sec
+Cached Storage - Threads: 10, Avg latency: 84.618µs, Throughput: 11817.75 ops/sec
+Cached Storage - Threads: 10, Avg latency: 82.133µs, Throughput: 12175.35 ops/sec
+Cached Storage - Threads: 10, Avg latency: 92.979µs, Throughput: 10755.09 ops/sec
+Cached Storage - Threads: 10, Avg latency: 88.456µs, Throughput: 11304.97 ops/sec
+Cached Storage - Threads: 10, Avg latency: 87.035µs, Throughput: 11489.63 ops/sec
+Cached Storage - Threads: 10, Avg latency: 86.834µs, Throughput: 11516.17 ops/sec
+Cached Storage - Threads: 10, Avg latency: 89.141µs, Throughput: 11218.14 ops/sec
+Cached Storage - Threads: 10, Avg latency: 87.177µs, Throughput: 11470.80 ops/sec
+Cached Storage - Threads: 10, Avg latency: 87.623µs, Throughput: 11412.49 ops/sec
+Cached Storage - Threads: 10, Avg latency: 85.937µs, Throughput: 11636.35 ops/sec
+Cached Storage - Threads: 10, Avg latency: 87.259µs, Throughput: 11460.10 ops/sec
+Cached Storage - Threads: 10, Avg latency: 82.211µs, Throughput: 12163.79 ops/sec
+Cached Storage - Threads: 10, Avg latency: 93.827µs, Throughput: 10657.89 ops/sec
+Cached Storage - Threads: 10, Avg latency: 86.773µs, Throughput: 11524.27 ops/sec
+Cached Storage - Threads: 10, Avg latency: 86.338µs, Throughput: 11582.36 ops/sec
+Cached Storage - Threads: 10, Avg latency: 85.955µs, Throughput: 11633.96 ops/sec
+Cached Storage - Threads: 10, Avg latency: 84.592µs, Throughput: 11821.35 ops/sec
+Cached Storage - Threads: 10, Avg latency: 89.173µs, Throughput: 11214.12 ops/sec
+Cached Storage - Threads: 10, Avg latency: 93.973µs, Throughput: 10641.29 ops/sec
+Cached Storage - Threads: 10, Avg latency: 87.117µs, Throughput: 11478.77 ops/sec
+Cached Storage - Threads: 10, Avg latency: 43.324µs, Throughput: 23081.54 ops/sec
+Cached Storage - Threads: 10, Avg latency: 93.576µs, Throughput: 10686.40 ops/sec
+Cached Storage - Threads: 10, Avg latency: 88.138µs, Throughput: 11345.80 ops/sec
+Cached Storage - Threads: 10, Avg latency: 88.445µs, Throughput: 11306.46 ops/sec
+Cached Storage - Threads: 10, Avg latency: 90.482µs, Throughput: 11051.85 ops/sec
+concurrent_access/cached_storage/threads_10_ops_100
+                        time:   [618.51 ms 623.64 ms 629.03 ms]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) low mild
+Vanilla Storage - Threads: 10, Avg latency: 29.871µs, Throughput: 33476.40 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 34.247µs, Throughput: 29199.47 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 36.298µs, Throughput: 27549.20 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 40.403µs, Throughput: 24750.29 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 50.171µs, Throughput: 19931.48 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 55.702µs, Throughput: 17952.67 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 64.689µs, Throughput: 15458.37 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 63.619µs, Throughput: 15718.56 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 67.14µs, Throughput: 14894.09 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 64.716µs, Throughput: 15451.94 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 71.08µs, Throughput: 14068.65 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 68.334µs, Throughput: 14633.79 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 67.089µs, Throughput: 14905.44 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 70.891µs, Throughput: 14106.13 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 76.971µs, Throughput: 12991.90 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 68.221µs, Throughput: 14658.20 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 73.176µs, Throughput: 13665.64 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 64.836µs, Throughput: 15423.48 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 73.085µs, Throughput: 13682.54 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 73.801µs, Throughput: 13549.90 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 32.013µs, Throughput: 31237.19 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 75.721µs, Throughput: 13206.23 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 72.548µs, Throughput: 13783.84 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 72.138µs, Throughput: 13862.21 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 71.66µs, Throughput: 13954.66 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 69.567µs, Throughput: 14374.43 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 66.638µs, Throughput: 15006.45 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 64.71µs, Throughput: 15453.48 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 72.692µs, Throughput: 13756.49 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 70.412µs, Throughput: 14202.02 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 69.676µs, Throughput: 14351.95 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 70.709µs, Throughput: 14142.35 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 72.113µs, Throughput: 13866.98 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 62.165µs, Throughput: 16086.16 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 68.818µs, Throughput: 14531.05 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 70.047µs, Throughput: 14275.98 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 72.332µs, Throughput: 13825.07 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 69.582µs, Throughput: 14371.47 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 67.649µs, Throughput: 14782.10 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 67.512µs, Throughput: 14812.03 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 73.345µs, Throughput: 13634.18 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 65.867µs, Throughput: 15181.97 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 71.616µs, Throughput: 13963.27 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 67.548µs, Throughput: 14804.25 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 67.954µs, Throughput: 14715.82 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 70.037µs, Throughput: 14278.05 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 76µs, Throughput: 13157.84 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 67.922µs, Throughput: 14722.67 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 31.299µs, Throughput: 31948.99 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 69.648µs, Throughput: 14357.87 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 67.766µs, Throughput: 14756.51 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 64.621µs, Throughput: 15474.63 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 64.719µs, Throughput: 15451.39 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 60.085µs, Throughput: 16642.86 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 69.888µs, Throughput: 14308.58 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 64.809µs, Throughput: 15429.76 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 56.258µs, Throughput: 17775.18 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 65.538µs, Throughput: 15258.25 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 70.79µs, Throughput: 14126.09 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 60.785µs, Throughput: 16451.39 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 65.401µs, Throughput: 15290.20 ops/sec
+Vanilla Storage - Threads: 10, Avg latency: 61.482µs, Throughput: 16264.66 ops/sec
+concurrent_access/vanilla_storage/threads_10_ops_100
+                        time:   [615.77 ms 618.16 ms 621.80 ms]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
+Cached Storage - Threads: 50, Avg latency: 47.096µs, Throughput: 21232.94 ops/sec
+Cached Storage - Threads: 50, Avg latency: 46.994µs, Throughput: 21279.14 ops/sec
+Cached Storage - Threads: 50, Avg latency: 51.966µs, Throughput: 19243.21 ops/sec
+Cached Storage - Threads: 50, Avg latency: 49.203µs, Throughput: 20323.74 ops/sec
+Cached Storage - Threads: 50, Avg latency: 61.572µs, Throughput: 16240.96 ops/sec
+Cached Storage - Threads: 50, Avg latency: 63.995µs, Throughput: 15626.20 ops/sec
+Cached Storage - Threads: 50, Avg latency: 57.429µs, Throughput: 17412.78 ops/sec
+Cached Storage - Threads: 50, Avg latency: 59.667µs, Throughput: 16759.52 ops/sec
+Cached Storage - Threads: 50, Avg latency: 65.733µs, Throughput: 15212.97 ops/sec
+Cached Storage - Threads: 50, Avg latency: 68.263µs, Throughput: 14649.07 ops/sec
+Cached Storage - Threads: 50, Avg latency: 47.059µs, Throughput: 21249.69 ops/sec
+Cached Storage - Threads: 50, Avg latency: 70.353µs, Throughput: 14213.96 ops/sec
+Cached Storage - Threads: 50, Avg latency: 67.553µs, Throughput: 14802.98 ops/sec
+Cached Storage - Threads: 50, Avg latency: 74.829µs, Throughput: 13363.64 ops/sec
+Cached Storage - Threads: 50, Avg latency: 66.524µs, Throughput: 15032.17 ops/sec
+Cached Storage - Threads: 50, Avg latency: 79.099µs, Throughput: 12642.30 ops/sec
+Cached Storage - Threads: 50, Avg latency: 68.126µs, Throughput: 14678.51 ops/sec
+Cached Storage - Threads: 50, Avg latency: 71.953µs, Throughput: 13897.80 ops/sec
+Cached Storage - Threads: 50, Avg latency: 80.146µs, Throughput: 12477.13 ops/sec
+Cached Storage - Threads: 50, Avg latency: 71.372µs, Throughput: 14010.97 ops/sec
+Cached Storage - Threads: 50, Avg latency: 69.16µs, Throughput: 14459.07 ops/sec
+Cached Storage - Threads: 50, Avg latency: 59.906µs, Throughput: 16692.66 ops/sec
+Cached Storage - Threads: 50, Avg latency: 78.154µs, Throughput: 12795.11 ops/sec
+Cached Storage - Threads: 50, Avg latency: 63.268µs, Throughput: 15805.57 ops/sec
+Cached Storage - Threads: 50, Avg latency: 66.508µs, Throughput: 15035.78 ops/sec
+Cached Storage - Threads: 50, Avg latency: 73.228µs, Throughput: 13655.94 ops/sec
+Cached Storage - Threads: 50, Avg latency: 71.635µs, Throughput: 13959.58 ops/sec
+Cached Storage - Threads: 50, Avg latency: 76.132µs, Throughput: 13135.05 ops/sec
+Cached Storage - Threads: 50, Avg latency: 58.281µs, Throughput: 17158.09 ops/sec
+Cached Storage - Threads: 50, Avg latency: 79.032µs, Throughput: 12653.05 ops/sec
+Cached Storage - Threads: 50, Avg latency: 73.122µs, Throughput: 13675.72 ops/sec
+Cached Storage - Threads: 50, Avg latency: 83.101µs, Throughput: 12033.44 ops/sec
+Cached Storage - Threads: 50, Avg latency: 72.069µs, Throughput: 13875.44 ops/sec
+Cached Storage - Threads: 50, Avg latency: 72.119µs, Throughput: 13865.79 ops/sec
+Cached Storage - Threads: 50, Avg latency: 43.332µs, Throughput: 23077.12 ops/sec
+Cached Storage - Threads: 50, Avg latency: 75.748µs, Throughput: 13201.51 ops/sec
+Cached Storage - Threads: 50, Avg latency: 72.645µs, Throughput: 13765.56 ops/sec
+Cached Storage - Threads: 50, Avg latency: 91.408µs, Throughput: 10939.88 ops/sec
+Cached Storage - Threads: 50, Avg latency: 80.338µs, Throughput: 12447.38 ops/sec
+Cached Storage - Threads: 50, Avg latency: 75.778µs, Throughput: 13196.31 ops/sec
+Cached Storage - Threads: 50, Avg latency: 85.462µs, Throughput: 11701.06 ops/sec
+Cached Storage - Threads: 50, Avg latency: 79.912µs, Throughput: 12513.76 ops/sec
+Cached Storage - Threads: 50, Avg latency: 64.272µs, Throughput: 15558.85 ops/sec
+Cached Storage - Threads: 50, Avg latency: 74.75µs, Throughput: 13377.89 ops/sec
+Cached Storage - Threads: 50, Avg latency: 74.898µs, Throughput: 13351.32 ops/sec
+Cached Storage - Threads: 50, Avg latency: 87.578µs, Throughput: 11418.27 ops/sec
+Cached Storage - Threads: 50, Avg latency: 82.858µs, Throughput: 12068.77 ops/sec
+Cached Storage - Threads: 50, Avg latency: 92.809µs, Throughput: 10774.70 ops/sec
+Cached Storage - Threads: 50, Avg latency: 77.005µs, Throughput: 12986.09 ops/sec
+Cached Storage - Threads: 50, Avg latency: 81.678µs, Throughput: 12243.09 ops/sec
+Cached Storage - Threads: 50, Avg latency: 79.943µs, Throughput: 12508.81 ops/sec
+Cached Storage - Threads: 50, Avg latency: 72.818µs, Throughput: 13732.78 ops/sec
+Cached Storage - Threads: 50, Avg latency: 86.21µs, Throughput: 11599.47 ops/sec
+Cached Storage - Threads: 50, Avg latency: 79.804µs, Throughput: 12530.66 ops/sec
+Cached Storage - Threads: 50, Avg latency: 73.549µs, Throughput: 13596.23 ops/sec
+Cached Storage - Threads: 50, Avg latency: 76.017µs, Throughput: 13154.85 ops/sec
+Cached Storage - Threads: 50, Avg latency: 81.317µs, Throughput: 12297.51 ops/sec
+Cached Storage - Threads: 50, Avg latency: 77.402µs, Throughput: 12919.50 ops/sec
+Cached Storage - Threads: 50, Avg latency: 81.268µs, Throughput: 12304.84 ops/sec
+Cached Storage - Threads: 50, Avg latency: 46.425µs, Throughput: 21540.11 ops/sec
+Cached Storage - Threads: 50, Avg latency: 72.611µs, Throughput: 13771.92 ops/sec
+Cached Storage - Threads: 50, Avg latency: 64.793µs, Throughput: 15433.69 ops/sec
+concurrent_access/cached_storage/threads_50_ops_100
+                        time:   [641.11 ms 644.46 ms 647.24 ms]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) low mild
+Vanilla Storage - Threads: 50, Avg latency: 26.082µs, Throughput: 38340.39 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 30.53µs, Throughput: 32754.49 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 31.84µs, Throughput: 31406.92 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 38.793µs, Throughput: 25777.52 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 37.394µs, Throughput: 26742.18 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 44.345µs, Throughput: 22550.34 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 45.969µs, Throughput: 21753.48 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 46.045µs, Throughput: 21717.81 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 46.079µs, Throughput: 21701.67 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 43.403µs, Throughput: 23039.37 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 45.483µs, Throughput: 21986.16 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 51.45µs, Throughput: 19436.33 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 46.14µs, Throughput: 21673.00 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 44.711µs, Throughput: 22365.75 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 41.113µs, Throughput: 24323.11 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 50.894µs, Throughput: 19648.52 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 49.895µs, Throughput: 20041.80 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 45.848µs, Throughput: 21811.11 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 48.425µs, Throughput: 20650.39 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 54.368µs, Throughput: 18392.97 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 43.937µs, Throughput: 22759.48 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 52.952µs, Throughput: 18884.81 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 44.334µs, Throughput: 22555.71 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 53.189µs, Throughput: 18800.66 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 44.395µs, Throughput: 22524.70 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 52.274µs, Throughput: 19129.92 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 50.735µs, Throughput: 19710.10 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 50.112µs, Throughput: 19955.24 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 48.121µs, Throughput: 20780.87 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 42.822µs, Throughput: 23352.42 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 46.242µs, Throughput: 21624.91 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 47.612µs, Throughput: 21002.70 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 51.351µs, Throughput: 19473.47 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 50.012µs, Throughput: 19994.85 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 52.718µs, Throughput: 18968.51 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 47.176µs, Throughput: 21197.20 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 43.795µs, Throughput: 22833.22 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 47.297µs, Throughput: 21142.63 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 54.048µs, Throughput: 18501.79 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 52.566µs, Throughput: 19023.43 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 46.804µs, Throughput: 21365.51 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 53.808µs, Throughput: 18584.43 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 50.914µs, Throughput: 19640.91 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 48.603µs, Throughput: 20574.54 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 47.175µs, Throughput: 21197.44 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 45.128µs, Throughput: 22158.80 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 41.546µs, Throughput: 24069.68 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 46.661µs, Throughput: 21430.97 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 45.653µs, Throughput: 21904.23 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 52.919µs, Throughput: 18896.52 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 51.021µs, Throughput: 19599.74 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 49.908µs, Throughput: 20036.72 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 52.777µs, Throughput: 18947.64 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 44.969µs, Throughput: 22237.35 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 44.81µs, Throughput: 22315.97 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 46.29µs, Throughput: 21602.80 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 47.426µs, Throughput: 21085.34 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 50.763µs, Throughput: 19699.07 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 49.502µs, Throughput: 20201.12 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 47.993µs, Throughput: 20836.22 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 43.829µs, Throughput: 22815.69 ops/sec
+Vanilla Storage - Threads: 50, Avg latency: 51.68µs, Throughput: 19349.75 ops/sec
+concurrent_access/vanilla_storage/threads_50_ops_100
+                        time:   [636.73 ms 640.19 ms 645.64 ms]
+Cached Storage - Threads: 100, Avg latency: 60.011µs, Throughput: 16663.36 ops/sec
+Cached Storage - Threads: 100, Avg latency: 61.702µs, Throughput: 16206.78 ops/sec
+Cached Storage - Threads: 100, Avg latency: 66.542µs, Throughput: 15027.96 ops/sec
+Cached Storage - Threads: 100, Avg latency: 74.174µs, Throughput: 13481.73 ops/sec
+Cached Storage - Threads: 100, Avg latency: 77.862µs, Throughput: 12843.11 ops/sec
+Cached Storage - Threads: 100, Avg latency: 87.257µs, Throughput: 11460.40 ops/sec
+Cached Storage - Threads: 100, Avg latency: 89.732µs, Throughput: 11144.17 ops/sec
+Cached Storage - Threads: 100, Avg latency: 99.561µs, Throughput: 10044.03 ops/sec
+Cached Storage - Threads: 100, Avg latency: 101.389µs, Throughput: 9862.98 ops/sec
+Cached Storage - Threads: 100, Avg latency: 102.711µs, Throughput: 9735.99 ops/sec
+Cached Storage - Threads: 100, Avg latency: 88.618µs, Throughput: 11284.32 ops/sec
+Cached Storage - Threads: 100, Avg latency: 104.458µs, Throughput: 9573.18 ops/sec
+Cached Storage - Threads: 100, Avg latency: 104.063µs, Throughput: 9609.48 ops/sec
+Cached Storage - Threads: 100, Avg latency: 101.614µs, Throughput: 9841.14 ops/sec
+Cached Storage - Threads: 100, Avg latency: 99.172µs, Throughput: 10083.40 ops/sec
+Cached Storage - Threads: 100, Avg latency: 85.232µs, Throughput: 11732.58 ops/sec
+Cached Storage - Threads: 100, Avg latency: 98.729µs, Throughput: 10128.72 ops/sec
+Cached Storage - Threads: 100, Avg latency: 108.02µs, Throughput: 9257.53 ops/sec
+Cached Storage - Threads: 100, Avg latency: 102.545µs, Throughput: 9751.73 ops/sec
+Cached Storage - Threads: 100, Avg latency: 103.759µs, Throughput: 9637.64 ops/sec
+Cached Storage - Threads: 100, Avg latency: 104.608µs, Throughput: 9559.44 ops/sec
+Cached Storage - Threads: 100, Avg latency: 99.354µs, Throughput: 10065.02 ops/sec
+Cached Storage - Threads: 100, Avg latency: 101.081µs, Throughput: 9893.03 ops/sec
+Cached Storage - Threads: 100, Avg latency: 100.216µs, Throughput: 9978.39 ops/sec
+Cached Storage - Threads: 100, Avg latency: 105.348µs, Throughput: 9492.34 ops/sec
+Cached Storage - Threads: 100, Avg latency: 104.426µs, Throughput: 9576.15 ops/sec
+Cached Storage - Threads: 100, Avg latency: 102.622µs, Throughput: 9744.50 ops/sec
+Cached Storage - Threads: 100, Avg latency: 108.666µs, Throughput: 9202.48 ops/sec
+Cached Storage - Threads: 100, Avg latency: 102.919µs, Throughput: 9716.30 ops/sec
+Cached Storage - Threads: 100, Avg latency: 101.177µs, Throughput: 9883.67 ops/sec
+Cached Storage - Threads: 100, Avg latency: 145.345µs, Throughput: 6880.16 ops/sec
+Cached Storage - Threads: 100, Avg latency: 104.86µs, Throughput: 9536.45 ops/sec
+Cached Storage - Threads: 100, Avg latency: 99.203µs, Throughput: 10080.25 ops/sec
+Cached Storage - Threads: 100, Avg latency: 104.115µs, Throughput: 9604.73 ops/sec
+Cached Storage - Threads: 100, Avg latency: 71.472µs, Throughput: 13991.48 ops/sec
+Cached Storage - Threads: 100, Avg latency: 102.497µs, Throughput: 9756.38 ops/sec
+Cached Storage - Threads: 100, Avg latency: 100.001µs, Throughput: 9999.86 ops/sec
+Cached Storage - Threads: 100, Avg latency: 99.847µs, Throughput: 10015.32 ops/sec
+Cached Storage - Threads: 100, Avg latency: 100.467µs, Throughput: 9953.49 ops/sec
+Cached Storage - Threads: 100, Avg latency: 99.81µs, Throughput: 10018.97 ops/sec
+Cached Storage - Threads: 100, Avg latency: 100.888µs, Throughput: 9911.89 ops/sec
+Cached Storage - Threads: 100, Avg latency: 103.521µs, Throughput: 9659.86 ops/sec
+Cached Storage - Threads: 100, Avg latency: 98.462µs, Throughput: 10156.17 ops/sec
+Cached Storage - Threads: 100, Avg latency: 103.464µs, Throughput: 9665.16 ops/sec
+Cached Storage - Threads: 100, Avg latency: 100.895µs, Throughput: 9911.29 ops/sec
+Cached Storage - Threads: 100, Avg latency: 101.66µs, Throughput: 9836.68 ops/sec
+Cached Storage - Threads: 100, Avg latency: 98.81µs, Throughput: 10120.37 ops/sec
+Cached Storage - Threads: 100, Avg latency: 102.044µs, Throughput: 9799.63 ops/sec
+Cached Storage - Threads: 100, Avg latency: 101.131µs, Throughput: 9888.16 ops/sec
+Cached Storage - Threads: 100, Avg latency: 98.661µs, Throughput: 10135.69 ops/sec
+Cached Storage - Threads: 100, Avg latency: 101.258µs, Throughput: 9875.71 ops/sec
+Cached Storage - Threads: 100, Avg latency: 102.352µs, Throughput: 9770.19 ops/sec
+Cached Storage - Threads: 100, Avg latency: 103.362µs, Throughput: 9674.67 ops/sec
+Cached Storage - Threads: 100, Avg latency: 100.905µs, Throughput: 9910.25 ops/sec
+Cached Storage - Threads: 100, Avg latency: 105.09µs, Throughput: 9515.65 ops/sec
+Cached Storage - Threads: 100, Avg latency: 94.024µs, Throughput: 10635.47 ops/sec
+Cached Storage - Threads: 100, Avg latency: 102.115µs, Throughput: 9792.85 ops/sec
+Cached Storage - Threads: 100, Avg latency: 106.044µs, Throughput: 9429.98 ops/sec
+Cached Storage - Threads: 100, Avg latency: 103.919µs, Throughput: 9622.84 ops/sec
+Cached Storage - Threads: 100, Avg latency: 99.708µs, Throughput: 10029.27 ops/sec
+Cached Storage - Threads: 100, Avg latency: 102.764µs, Throughput: 9731.01 ops/sec
+Cached Storage - Threads: 100, Avg latency: 101.2µs, Throughput: 9881.42 ops/sec
+concurrent_access/cached_storage/threads_100_ops_100
+                        time:   [661.10 ms 671.51 ms 694.71 ms]
+Found 2 outliers among 10 measurements (20.00%)
+  1 (10.00%) high mild
+  1 (10.00%) high severe
+Vanilla Storage - Threads: 100, Avg latency: 25.341µs, Throughput: 39461.33 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 27.081µs, Throughput: 36925.98 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 85.942µs, Throughput: 11635.65 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 34.23µs, Throughput: 29213.96 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 36.005µs, Throughput: 27773.88 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 42.576µs, Throughput: 23487.18 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 39.767µs, Throughput: 25146.21 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 45.027µs, Throughput: 22208.68 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 45.141µs, Throughput: 22152.44 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 49.337µs, Throughput: 20268.60 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 216.563µs, Throughput: 4617.59 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 100.137µs, Throughput: 9986.23 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 47.944µs, Throughput: 20857.27 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 117.23µs, Throughput: 8530.18 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 45.402µs, Throughput: 22025.00 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 48.678µs, Throughput: 20542.94 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 55.04µs, Throughput: 18168.53 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 46.668µs, Throughput: 21427.70 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 47.422µs, Throughput: 21086.86 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 122.153µs, Throughput: 8186.39 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 49.652µs, Throughput: 20139.79 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 46.311µs, Throughput: 21593.07 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 45.998µs, Throughput: 21739.70 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 49.129µs, Throughput: 20354.25 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 46.582µs, Throughput: 21467.52 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 44.961µs, Throughput: 22241.39 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 46.181µs, Throughput: 21653.64 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 49.128µs, Throughput: 20354.99 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 49.088µs, Throughput: 20371.47 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 46.578µs, Throughput: 21469.20 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 44.911µs, Throughput: 22266.20 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 37.333µs, Throughput: 26785.83 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 45.6µs, Throughput: 21929.50 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 43.741µs, Throughput: 22861.70 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 52.309µs, Throughput: 19116.88 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 50.916µs, Throughput: 19639.82 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 43.853µs, Throughput: 22803.38 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 46.408µs, Throughput: 21547.82 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 48.147µs, Throughput: 20769.49 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 531.098µs, Throughput: 1882.89 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 34.037µs, Throughput: 29379.12 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 37.653µs, Throughput: 26558.22 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 39.932µs, Throughput: 25042.32 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 43.904µs, Throughput: 22776.87 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 45.635µs, Throughput: 21912.71 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 46.714µs, Throughput: 21406.85 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 45.629µs, Throughput: 21915.47 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 50.981µs, Throughput: 19615.15 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 47.857µs, Throughput: 20895.26 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 46.312µs, Throughput: 21592.30 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 50.918µs, Throughput: 19639.12 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 50.172µs, Throughput: 19931.05 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 44.424µs, Throughput: 22510.02 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 54.976µs, Throughput: 18189.49 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 48.843µs, Throughput: 20473.66 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 51.032µs, Throughput: 19595.46 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 48.849µs, Throughput: 20471.16 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 55.184µs, Throughput: 18121.16 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 53.928µs, Throughput: 18542.95 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 46.584µs, Throughput: 21466.41 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 52.226µs, Throughput: 19147.48 ops/sec
+Vanilla Storage - Threads: 100, Avg latency: 46.783µs, Throughput: 21375.09 ops/sec
+concurrent_access/vanilla_storage/threads_100_ops_100
+                        time:   [656.14 ms 687.36 ms 744.28 ms]
+Found 2 outliers among 10 measurements (20.00%)
+  1 (10.00%) high mild
+  1 (10.00%) high severe
+
